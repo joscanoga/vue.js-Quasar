@@ -1,0 +1,8 @@
+@import './base.css';
+#app{
+    
+    min-height: 100vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}

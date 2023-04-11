@@ -1,0 +1,6 @@
+Crear proyecto:
+	npm init vue@latest
+instalar proyecto:
+	npm install
+correr servidor dev:
+	npm run dev
