@@ -1,0 +1,25 @@
+// Import the functions you need from the SDKs you need
+//archivo para la configuracion de firebase
+//se debe crear un archivo .env en la raiz del proyecto con las variables de entorno
+//tal como se muestra en el archivo .env.example
+import { initializeApp } from "firebase/app";
+import {getAuth} from "firebase/auth";
+import {getFirestore} from "firebase/firestore";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+ const firebaseConfig = {
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.appId
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+export {auth, db};
