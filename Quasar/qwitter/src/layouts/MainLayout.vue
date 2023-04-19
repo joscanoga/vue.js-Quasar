@@ -1,0 +1,117 @@
+<template>
+  <q-layout view="lHr lpR fFf">
+
+    <q-header bordered class="bg-white text-black text-center">
+      <q-toolbar>
+        <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
+
+
+        <q-toolbar-title class="text-weight-bold ">
+          <span class="gt-sm">Qwitter</span>
+          <q-icon name="mdi-bird" class=" text-primary q-pa-md lt-md absolute-center" size="sm" />
+        </q-toolbar-title>
+
+
+      </q-toolbar>
+    </q-header>
+
+    <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
+      <q-icon name="mdi-bird" class=" text-primary q-pa-md" size="md" />
+
+
+      <q-list>
+        <q-item clickable v-ripple to="/" exact>
+          <q-item-section avatar>
+            <q-icon color="primary" name="mdi-home" size="md" />
+          </q-item-section>
+
+          <q-item-section  class="text-h6 text fa-weight-bold">Home</q-item-section>
+        </q-item>
+        <q-item to="/about" clickable  v-ripple   >
+          <q-item-section avatar>
+            <q-icon color="primary" name="mdi-information-variant" size="md" />
+          </q-item-section>
+
+          <q-item-section class="text-h6 text fa-weight-bold">About</q-item-section>
+        </q-item>
+
+      </q-list>
+
+
+    </q-drawer>
+
+    <q-drawer show-if-above v-model="rightDrawerOpen" side="right" bordered>
+      <q-input class="q-ma-md" outlined rounded dense v-model="text" label="Search Qwitter">
+        <template v-slot:prepend>
+          <q-icon name="search" />
+        </template>
+      </q-input>
+      <q-list separator padding>
+        <q-item class="q-pa-md">
+          <q-item-section>
+            <q-item-label class="text-gray" overline>Education</q-item-label>
+            <q-item-label>Something amazing</q-item-label>
+            <q-item-label caption>Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit
+              elit.</q-item-label>
+          </q-item-section>
+
+          <q-item-section side top>
+            <q-item-label caption>5 min ago</q-item-label>
+          </q-item-section>
+        </q-item>
+        <q-item class="q-pa-md">
+          <q-item-section>
+            <q-item-label class="text-gray" overline>Education</q-item-label>
+            <q-item-label>Something amazing</q-item-label>
+            <q-item-label caption>Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit
+              elit.</q-item-label>
+          </q-item-section>
+
+          <q-item-section side top>
+            <q-item-label caption>5 min ago</q-item-label>
+          </q-item-section>
+        </q-item>
+        <q-item class="q-pa-md">
+          <q-item-section>
+            <q-item-label class="text-gray" overline>Education</q-item-label>
+            <q-item-label>Something amazing</q-item-label>
+            <q-item-label caption>Secondary line text. Lorem ipsum dolor sit amet, consectetur adipiscit
+              elit.</q-item-label>
+          </q-item-section>
+
+          <q-item-section side top>
+            <q-item-label caption>5 min ago</q-item-label>
+          </q-item-section>
+        </q-item>
+      </q-list>
+    </q-drawer>
+
+    <q-page-container>
+      <router-view />
+    </q-page-container>
+
+  </q-layout>
+</template>
+
+<script>
+import { ref } from 'vue'
+
+export default {
+  setup() {
+    const leftDrawerOpen = ref(false)
+    const rightDrawerOpen = ref(true)
+
+    return {
+      leftDrawerOpen,
+      toggleLeftDrawer() {
+        leftDrawerOpen.value = !leftDrawerOpen.value
+      },
+
+      rightDrawerOpen,
+      toggleRightDrawer() {
+        rightDrawerOpen.value = !rightDrawerOpen.value
+      }
+    }
+  }
+}
+</script>

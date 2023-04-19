@@ -1,2 +1,3 @@
 crear proyecto
 	npm init quasar
+	Quasar create <nombre_proyecto>

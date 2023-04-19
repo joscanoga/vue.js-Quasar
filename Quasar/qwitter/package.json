@@ -1,0 +1,31 @@
+{
+  "name": "Qwitter",
+  "version": "0.0.1",
+  "description": "a copy of twitter based on the turorial: https://www.youtube.com/watch?v=la-0ulfn0_M",
+  "productName": "Qwitter",
+  "author": "joscanoga <51725572+joscanoga@users.noreply.github.com>",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0",
+    "dev": "quasar dev",
+    "build": "quasar build"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@quasar/extras": "^1.0.0",
+    "date-fns": "^2.29.3",
+    "quasar": "^2.6.0",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^1.0.0",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.14"
+  },
+  "engines": {
+    "node": "^18 || ^16 || ^14.19",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
