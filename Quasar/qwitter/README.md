@@ -1,6 +1,6 @@
 # qwitter (qwitter)
 
-a copy of twitter based on the turorial: https://www.youtube.com/watch?v=la-0ulfn0_M
+a twitter copy based on the turorial: https://www.youtube.com/watch?v=la-0ulfn0_M with some modifications and additions
 
 ## Install the dependencies
 ```bash

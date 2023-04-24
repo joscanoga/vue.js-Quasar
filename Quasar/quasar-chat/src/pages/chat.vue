@@ -14,6 +14,7 @@ watchEffect(async ( onCleanup ) =>{
     const q = query(collection(db, "chats"), orderBy("time","desc"),limit(15));
     const unsubscribe = onSnapshot(q, (snapshot) => {
       snapshot.docChanges().forEach(async (change) => {
+        
         if (change.type === "added") {
 
           menssages.value.push({
